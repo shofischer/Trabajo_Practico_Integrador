@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto práctico integrador</title>
+</head>
+<body>
+    <h1>Sistema de Gestión de Biblioteca</h1>
+
+    <h3>Integrantes:</h3>
+    <ul>
+        <li>Maryerika Rivas</li>
+        <li>Sofia Fischer</li>
+        <li>Yanet Montoya</li> 
+    </ul> 
+
+    <h2>Introducción</h2>
+    <p>El siguiente trabajo práctico integrador está diseñado para evaluar tus
+conocimientos en los fundamentos de JavaScript a través de la
+implementación de un conjunto de tareas que deben ser resueltas en un
+solo programa. Asegúrate de aplicar las buenas prácticas y estándares de
+nomenclatura, además de seguir las instrucciones dadas.</p>
+    <h2>Objetivo</h2>
+    <p>Desarrollar un sistema de gestión para una biblioteca que permita
+administrar libros y usuarios, aplicando los conceptos fundamentales de
+JavaScript vistos en el módulo.</p>
+    <h2>Requerimientos</h2>
+    <h3>1. Estructura de Datos</h3>
+    <ol type="a">
+        <li>Crear un array de objetos llamado libros que contenga al menos 10
+            libros. Cada libro debe tener las siguientes propiedades:
+            <ul>
+                <li>id (número)</li>
+                <li>título (string),</li>
+                <li>autor (string),</li>
+                <li>año (número),</li>
+                <li>género (string),</li>
+                <li>disponible (booleano).</li>
+            </ul>
+        </li>
+        <br>
+        <li>Crear un array de objetos llamado usuarios con al menos 5 usuarios.
+                Cada usuario debe tener:
+        </li>
+            <ul>
+                <li>id (número)</li>
+                <li>nombre (string)</li>
+                <li>email (string)</li>
+                <li>librosPrestados (array de ids de libros).</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>2. Funciones de Gestión de Libros</h3>
+    <ol type="a">
+        <li>Implementar una función agregarLibro(id, titulo, autor, anio, genero)
+            que agregue un nuevo libro al array libros.
+        </li>
+        <br>
+        <li>Crear una función buscarLibro(criterio, valor) que permita buscar
+            libros por título, autor o género utilizando el algoritmo de búsqueda
+            lineal.
+        </li>
+        <br>
+        <li>Desarrollar una función ordenarLibros(criterio) que ordene los libros
+            por título o año utilizando el algoritmo de ordenamiento burbuja
+            (bubble sort) y luego muestre los libros ordenados en la consola.
+        </li>
+        <br>
+        <li>Desarrollar una función borrarLibro(id) que elimine el libro que se le
+            pase por parámetro.
+        </li>
+    </ol>   
+    <h3>3. Gestión de Usuarios</h3>
+    <ol type="a">
+        <li>Implementar una función registrarUsuario(nombre, email) que
+            agregue un nuevo usuario al array usuarios.
+        </li>
+        <br>
+        <li>Implementar una función mostrarTodosLosUsuarios() que me        
+            devuelva el array completo de usuarios
+        </li>
+        <br>
+        <li>Crear una función buscarUsuario(email) que devuelva la información                  
+            de un usuario dado su email.
+        </li>
+        <br>
+        <li>Implementar una función borrarUsuario(nombre, email) que elimine el
+            usuario seleccionado.
+        </li>
+    </ol>
+    <h3>4. Sistema de Préstamos</h3>
+    <ol type="a">
+        <li>Desarrollar una función prestarLibro(idLibro, idUsuario) que marque
+            un libro como no disponible y lo agregue a la lista de libros prestados
+            del usuario.                    
+        </li>
+        <br>
+        <li>Implementar una función devolverLibro(idLibro, idUsuario) que
+            marque un libro como disponible y lo elimine de la lista de libros      
+            prestados del usuario.
+        </li>
+    </ol>
+
+    <h3>5. Reportes</h3>
+    <ol type="a">
+        <li>Crear una función generarReporteLibros() que utilice métodos
+        avanzados de arrays (.map(), .filter(), .reduce()) para generar un
+        reporte con la siguiente información:
+        </li>
+            <ul>
+                <li>Cantidad total de libros.</li>
+                <li>Cantidad de libros prestados.</li>
+                <li>Cantidad de libros por género.</li>
+                <li>Libro más antiguo y más nuevo.</li>
+            </ul>
+    </ol>
+    <h3>6. Identificación Avanzada de libros</h3>
+    <ol type="a">
+        <li>Implementar una función librosConPalabrasEnTitulo() que identifique
+            y muestre todos los libros cuyo título contiene más de una palabra          
+            (no títulos que contengan números ni otros caracteres).
+        </li>
+        <br>
+        <li>La función debe devolver un array con los títulos de esos libros y
+            mostrarlo en la consola.
+        </li>
+    </ol>       
+    <h3>7. Cálculos Estadísticos</h3>
+    <ol type="a">
+        <li>Desarrollar una función calcularEstadisticas() que utilice el objeto
+            Math para calcular y mostrar:       
+        </li>
+            <ul>        
+                <li>Promedio de años de publicación de los libros.</li>
+                <li>Año de publicación más frecuente.</li>
+                <li>Diferencia en años entre el libro más antiguo y el más nuevo.
+                </li>
+            </ul>
+    </ol>
+    <h3>8. Manejo de Cadenas</h3>
+    <ol type="a">
+        <li>Crear una función normalizarDatos() que utilice métodos de strings
+            para:
+        </li>
+            <ul>
+                <li>Convertir todos los títulos a mayúsculas.</li>              
+                <li>Eliminar espacios en blanco al inicio y final de los nombres de
+                    autores.
+                </li>
+                <li>Formatear los emails de los usuarios a minúsculas.          
+                </li>
+            </ul>
+    </ol>
+    <h3>9. Interfaz de Usuario por Consola</h3>
+    <ol type="a">
+        <li>Implementar una función menuPrincipal() que muestre un menú de          
+
+
+            opciones al usuario y permita interactuar con el sistema utilizando
+            prompt().
+        </li>
+        <br>        
+        <li>El menú debe incluir opciones para todas las funcionalidades
+            anteriores y utilizar estructuras de control (if, switch, ciclos) para
+            manejar la lógica.
+        </li>
+    </ol>
+    <h3>10. Comentando mi código</h3>
+    <ol type="a">
+        <li>Se tomará como último punto a evaluar la correcta utilización de        
+            comentarios explicando paso por paso su código.
+        </li>
+        <br>
+        <li>Deberán seccionar el código punto por punto y con una explicación       
+            corta y simple de que hicieron en cada punto.
+        </li>
+    </ol>    
+
+</body>
+    <script src="trabajo-practico-integrador.js"></script>
+</html>
